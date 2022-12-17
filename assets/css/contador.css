@@ -1,0 +1,183 @@
+/*-----------------------------CONTADOR---------------------------*/
+
+.days {
+    display:none !important;
+    }
+
+.hours {
+    text-align: center;
+    }
+
+.minutes {
+    text-align: center;
+    }
+
+.seconds {
+    text-align: center;
+    }
+
+#clockbox1 {
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 15px;
+	}
+
+#clockbox1 > div {
+    background: #0c8140;
+    display: inline-block;
+    width: 23%;
+    border-radius: 5px;
+	}
+
+#clockbox1 div > span {
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    width: 55px;
+    line-height: 1em;
+    padding: 5px 0 0;
+	}
+	
+#clockbox2 {
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 15px;
+	}
+
+#clockbox2 > div {
+    background: #0c8140;
+    display: inline-block;
+    width: 23%;
+    border-radius: 5px;
+	}
+
+#clockbox2 div > span {
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    width: 55px;
+    line-height: 1em;
+    padding: 5px 0 0;
+	}
+	
+#clockbox3 {
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 15px;
+	}
+
+#clockbox3 > div {
+    background: #0c8140;
+    display: inline-block;
+    width: 23%;
+    border-radius: 5px;
+	}
+
+#clockbox3 div > span {
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    width: 55px;
+    line-height: 1em;
+    padding: 5px 0 0;
+	}
+	
+#clockbox4 {
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 15px;
+	}
+
+#clockbox4 > div {
+    background: #000;
+    display: inline-block;
+    width: 23%;
+    border-radius: 5px;
+	}
+
+#clockbox4 div > span {
+    display: inline-block;
+    font-size: 28px;
+    color: red;
+    font-weight: 600;
+    width: 55px;
+    line-height: 1em;
+    padding: 5px 0 0;
+	}
+
+.smalltext {
+    font-size: 9px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-top: -4px;
+	}
+
+.text-oferta {
+    font-size: 20px;
+    letter-spacing: -1px;
+    line-height: 32px;
+    margin-bottom: 11px;
+    color: #000;
+    font-weight: 800;
+	}
+	
+/*-------------------BOX PREÇO---------------------*/
+
+.kits .kits__most {
+    top: -55px;
+    }
+	
+.kits .kits__most span {
+    padding: 15px 20px;
+	}
+	
+.desconto {
+    width: 80px;
+    margin: -30px auto 20px;
+    position: relative;
+    z-index: 9;
+	}
+	
+/*-------------------MOBILE BOX PREÇO-------------*/
+	
+	
+@media only screen and (min-width: 640px){
+
+.cell.mobile {
+	display:none;
+	}	
+	}
+	
+@media only screen and (max-width: 640px){
+
+.cell.desktop {
+	display:none;
+	}
+	
+.kits .kits__cards img {
+    margin-bottom: 6px;
+    display: block !important;
+    margin: 0 auto;
+	}
+	}
+
+
+.prazo-frete{display:none!important}.accordion li:last-child{display:none!important}
