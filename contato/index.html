@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviço de Atendimento ao Consumidor</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+	<script>
+	function onSubmit(response) {
+		 $("#form").submit();
+		return true;
+	}
+	</script>
+	<script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+	
+    <style>
+        body {
+            margin: 50px 0;
+        }
+        
+        [type='text'],
+        [type='password'],
+        [type='date'],
+        [type='datetime'],
+        [type='datetime-local'],
+        [type='month'],
+        [type='week'],
+        [type='email'],
+        [type='number'],
+        [type='search'],
+        [type='tel'],
+        [type='time'],
+        [type='url'],
+        [type='color'],
+        textarea,
+        select {
+            box-shadow: none;
+            transition: none;
+            border-radius: 6px;
+            padding: 10px 15px 12px;
+            height: auto;
+        }
+        
+        [type='text']:focus,
+        [type='password']:focus,
+        [type='date']:focus,
+        [type='datetime']:focus,
+        [type='datetime-local']:focus,
+        [type='month']:focus,
+        [type='week']:focus,
+        [type='email']:focus,
+        [type='number']:focus,
+        [type='search']:focus,
+        [type='tel']:focus,
+        [type='time']:focus,
+        [type='url']:focus,
+        [type='color']:focus,
+        textarea:focus,
+        select:focus {
+            transition: none;
+        }
+        
+        .button {
+            border-radius: 6px;
+            transition: none;
+        }
+        
+        .button:hover {
+            transition: none;
+        }
+        
+        textarea {
+            height: 120px;
+        }
+        
+        select {
+            padding-right: 28px;
+        }
+        
+        #if-cpf, #if-endereco {
+            display: none;
+        }
+		input.error, select.error, textarea.error {
+			border-color:red;
+		}
+		label.error {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 11px;
+			color: red;
+			margin-top: -10px;
+			margin-bottom: 10px;
+		}
+    </style>
+
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class="grid-x grid-padding-x align-center">
+            <div class="small-12 medium-9 large-4 cell">
+
+                <h3>Serviço de Atendimento ao Consumidor</h3>
+				
+				<p>Se você deseja saber o rastreio do seu pedido, <a href="https://pedidos.store/pedidos/" target="_blank" rel="noopener">CLIQUE AQUI</a>. Para outras informações envie sua mensagem preenchendo o formulário abaixo:</p>
+				
+				
+									<form method="post" action="" id="form">
+
+						<label>Nome:
+							<input type="text" name="name" value="" required />
+						</label>
+
+						<label>E-mail:
+							<input type="email" name="email" value="" required />
+						</label>
+
+						<label>Whatsapp:
+							<input type="text" id="whats" name="phone" value="" required />
+						</label>
+
+						<label>Assunto:
+							<select id="assunto" name="subject" required>
+								<option>Escolha o Assunto</option>
+								<option value="Ainda não comprei, tenho Dúvidas">Ainda não comprei, tenho Dúvidas</option>
+								<option value="Troca de endereço do pedido">Troca de endereço do pedido</option>
+								<option value="Atualização do meu rastreio">Atualização do meu rastreio</option>
+								<option value="Reenvio do meu pedido">Reenvio do meu pedido</option>
+								<option value="Cancelamento/Devolução">Cancelamento/Devolução</option>
+								<option value="Outros assuntos...">Outros assuntos...</option>
+							</select>
+						</label>
+
+						<label id="if-cpf">CPF:
+							<input type="text" id="cpf" name="document" value="" />
+						</label>
+
+						<div id="if-endereco">
+							<label>CEP: <input type="text" id="cep" name="cep" value="" /></label>
+							<label>Endereço: <input type="text" id="address" name="address" value="" /></label>
+							<label>Número: <input type="text" id="number" name="number" value="" /></label>
+							<label>Complemento: <input type="text" id="complement" name="complement" value="" /></label>
+							<label>Bairro: <input type="text" id="district" name="district" value="" /></label>
+							<label>Cidade: <input type="text" id="city" name="city" value="" /></label>
+							<label>Estado: <select name="state">
+											<option>Selecione o Estado</option>
+											<option value="AC">Acre</option>
+											<option value="AL">Alagoas</option>
+											<option value="AP">Amapá</option>
+											<option value="AM">Amazonas</option>
+											<option value="BA">Bahia</option>
+											<option value="CE">Ceará</option>
+											<option value="DF">Distrito Federal</option>
+											<option value="ES">Espírito Santo</option>
+											<option value="GO">Goiás</option>
+											<option value="MA">Maranhão</option>
+											<option value="MT">Mato Grosso</option>
+											<option value="MS">Mato Grosso do Sul</option>
+											<option value="MG">Minas Gerais</option>
+											<option value="PA">Pará</option>
+											<option value="PB">Paraíba</option>
+											<option value="PR">Paraná</option>
+											<option value="PE">Pernambuco</option>
+											<option value="PI">Piauí</option>
+											<option value="RJ">Rio de Janeiro</option>
+											<option value="RN">Rio Grande do Norte</option>
+											<option value="RS">Rio Grande do Sul</option>
+											<option value="RO">Rondônia</option>
+											<option value="RR">Roraima</option>
+											<option value="SC">Santa Catarina</option>
+											<option value="SP">São Paulo</option>
+											<option value="SE">Sergipe</option>
+											<option value="TO">Tocantins</option>
+										</select>
+									</label>
+						</div>
+						
+						<label>Mensagem:
+							<textarea name="message" required></textarea>
+						</label>
+
+						<input type="submit" value="Enviar Mensagem" class="button large expanded g-recaptcha" data-size="invisible" data-sitekey="6Lc6iEUUAAAAAKfBSQN2vxfhBp4ecoYREPEeo22h" data-callback="onSubmit"/>
+
+					</form>
+								
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app-v=2.js"></script>
+    <script src="js/masked.js"></script>
+
+    <script>
+		$("#form").validate();
+        $(document).ready(function() {
+            $('#assunto').on('change', function() {
+                if (this.value == 'Troca de endereço do pedido' || this.value == 'Atualização do meu rastreio' || this.value == 'Reenvio do meu pedido' || this.value == 'Cancelamento/Devolução') {
+                    $("#if-cpf").show();
+					$("#cpf").attr("required", true);
+                } else {
+                    $("#if-cpf").hide();
+					$("#cpf").removeAttr("required");
+                }
+            });
+        });
+        $("#cpf").mask("999.999.999-99");
+		
+        $(document).ready(function() {
+            $('#assunto').on('change', function() {
+                if (this.value == 'Troca de endereço do pedido' || this.value == 'Reenvio do meu pedido') {
+                    $("#if-endereco").show();
+                } else {
+                    $("#if-endereco").hide();
+                }
+            });
+        });
+        $("#cep").mask("99999-999");
+
+        // MASKED INPUT
+        jQuery("#whats").mask("(99) 99999-999?9")
+            .focusout(function(event) {
+                var target, phone, element;
+                target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+                phone = target.value.replace(/\D/g, '');
+                element = $(target);
+                element.unmask();
+                if (phone.length > 10) {
+                    element.mask("(99) 99999-999?9");
+                } else {
+                    element.mask("(99) 9999-9999?9");
+                }
+            });
+    </script>
+
+</body>
+
+</html>
